@@ -1,5 +1,5 @@
 angular
-.module('TravelSensei', ['ui.router'])
+.module('TravelSensei', ['ui.router', 'ParallaxMod'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -17,7 +17,7 @@ angular
     .state('cities', {
       url: '/cities',
       templateUrl: 'app/views/cities.html',
-      //, controller: 'CitiesCtrl'
+      controller: 'CitiesCtrl'
     })
     .state('tokyo',{
       url: '/cities/tokyo',
