@@ -21,7 +21,7 @@ angular
     })
     .state('city', {
       url: '/cities/nagoya', /// to be fixed
-      templateUrl: 'app/views/tokyo.html', 
+      templateUrl: 'app/views/nagoya.html', 
       controller: 'CityCtrl'
     })
     // .state('tokyo',{

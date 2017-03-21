@@ -10,7 +10,7 @@ angular
 
     //functions
     function getCity(city) {
-      return $http.get('/cities/' + city);
+      return $http.get('/cities/' + city + '/data');
     }
 
   }
