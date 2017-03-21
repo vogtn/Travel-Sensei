@@ -1,5 +1,5 @@
 angular
-.module('GenericApp')
+.module('TravelSensei')
 .factory('AuthFactory', [
   '$window',
   function($window) {

@@ -1,5 +1,5 @@
 angular
-.module('GenericApp')
+.module('TravelSensei')
 .factory('AlertsFactory', [
   function() {
     var alerts = [];

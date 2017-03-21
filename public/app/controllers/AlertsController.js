@@ -1,5 +1,5 @@
 angular
-.module('GenericApp')
+.module('TravelSensei')
 .controller('AlertsCtrl', [
   '$scope',
   'AlertsFactory',

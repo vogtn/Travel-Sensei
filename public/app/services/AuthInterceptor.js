@@ -1,5 +1,5 @@
 angular
-.module('GenericApp')
+.module('TravelSensei')
 .factory('AuthInterceptor', [
   'AuthFactory',
   function(AuthFactory) {

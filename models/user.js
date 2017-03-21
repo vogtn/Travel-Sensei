@@ -11,7 +11,8 @@ var UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  homeAirport : String
 });
 
 UserSchema.set('toJSON', {

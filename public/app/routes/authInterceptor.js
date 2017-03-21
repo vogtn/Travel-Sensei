@@ -1,5 +1,5 @@
 angular
-.module('GenericApp')
+.module('TravelSensei')
 .config([
   '$httpProvider',
   function($httpProvider) {
