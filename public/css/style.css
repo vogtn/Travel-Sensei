@@ -7,32 +7,25 @@
 	height: 100vh;
 	width: 100vw;
 }
-
-/*cities html*/
 .parallax {
-  height: 500px;
-  background-color: black;
-  border: 5px solid red;
-  box-sizing: border-box;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 .cityName {
   color: white; 
   font-size: 50px;
   opacity: 0.5;
-
 }
-
 .cityName:hover {
   opacity: 1;
   text-decoration: none;
 }
-
-
-
-
-
+.divide {
+  margin: 50px 0;
+  height: 50px;
+}
+.containerbox {
+  overflow: hidden;
+}
 
