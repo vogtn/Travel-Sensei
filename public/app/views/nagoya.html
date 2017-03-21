@@ -1,0 +1,15 @@
+<div>
+    <h1>Nagoya</h1>
+</div>
+<hr>
+<div class="well">
+<div class="text-center" ng-repeat='top in topFive track by $index'>
+<h1>{{top.name}}</h1><br>
+{{top.phone}}<br>
+<!-- {{top.url}}<br> -->
+{{top.rating}}<br>
+{{top.review_count}}<br>
+<img ng-src="{{top.image_url}}"><br>
+{{top.snippet_text}}<br>
+</div>
+</div>

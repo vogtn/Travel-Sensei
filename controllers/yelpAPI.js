@@ -19,7 +19,7 @@ router.route('/:cityName/data')
     yelp.search({
       term: 'food',
       location: location,
-      limit: 5,           // only 5 results returned
+      limit: 6,           // only 5 results returned
       sort: 2             // 2 = highest rated results
     })
     .then(function(data) {

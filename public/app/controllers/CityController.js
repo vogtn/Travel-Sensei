@@ -8,7 +8,8 @@ angular
   function($scope, $state, $stateParams, YelpFactory) {
     YelpFactory.getCity('nagoya')
     .then(function(res) {
-      console.log(res);
+      $scope.topFive = res.data
+      console.log('success', res);
     })
     .catch(function(err) {
       console.log(err);
