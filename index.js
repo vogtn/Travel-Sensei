@@ -10,8 +10,6 @@ var secret = process.env.JWT_SECRET;
 
 var app = express();
 
-// yelp API
-
 // mongoose models and connection
 var mongoose = require('mongoose');
 var User = require('./models/user');
@@ -25,12 +23,14 @@ app.use(require('morgan')('dev'));
 
 
 // controllers
+// user auth controller
 app.use('/users', expressJWT({secret: secret})
   .unless({
     path: [{ url: '/users', methods: ['POST'] }]
   }), require('./controllers/users'));
+// yelp controller
+app.use('/cities', require('./controllers/yelpAPI'));
 
-app.use('/yelpAPI', require('./controllers/yelpAPI'));
 // this middleware will check if expressJWT did not authorize the user, and return a message
 app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {

@@ -11,7 +11,7 @@ angular
     $stateProvider
     .state('home', {
       url: '/',
-      templateUrl:'/app/views/home.html'
+      templateUrl:'app/views/home.html'
       // ,controller: 'HomeCtrl'
     })
     .state('cities', {
@@ -19,11 +19,16 @@ angular
       templateUrl: 'app/views/cities.html',
       controller: 'CitiesCtrl'
     })
-    .state('tokyo',{
-      url: '/cities/tokyo',
-      templateUrl: 'app/views/tokyo.html',
-      controller: 'TokyoCtrl'
+    .state('city', {
+      url: '/cities/nagoya', /// to be fixed
+      templateUrl: 'app/views/tokyo.html', 
+      controller: 'CityCtrl'
     })
+    // .state('tokyo',{
+    //   url: '/cities/tokyo',
+    //   templateUrl: 'app/views/tokyo.html',
+    //   controller: 'TokyoCtrl'
+    // })
     .state('signup', {
       url: '/signup',
       templateUrl: 'app/views/userSignup.html',
