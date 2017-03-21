@@ -21,9 +21,15 @@
 }
 .cityName {
   color: white; 
-  font-size: 50px
+  font-size: 50px;
+  opacity: 0.5;
+
 }
 
+.cityName:hover {
+  opacity: 1;
+  text-decoration: none;
+}
 
 
 
