@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-sidebar": "^1.1.0",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",

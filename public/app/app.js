@@ -19,6 +19,11 @@ angular
       templateUrl: 'app/views/cities.html',
       controller: 'CitiesCtrl'
     })
+    .state('tokyo',{
+      url: '/cities/tokyo',
+      templateUrl: 'app/views/tokyo.html',
+      controller: 'TokyoCtrl'
+    })
     .state('signup', {
       url: '/signup',
       templateUrl: 'app/views/userSignup.html',
