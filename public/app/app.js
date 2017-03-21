@@ -1,5 +1,5 @@
 angular
-.module('GenericApp', ['ui.router'])
+.module('TravelSensei', ['ui.router'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
