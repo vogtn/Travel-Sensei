@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- CSS --> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Angular -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
     <!-- Angular Resource -->
@@ -42,7 +44,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
+    <div>
       <div ng-include="'app/views/navbar.html'"></div>
       <div ng-controller="AlertsCtrl">
         <div ng-repeat='alert in alerts'>
