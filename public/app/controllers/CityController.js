@@ -10,23 +10,28 @@ angular
   function($scope, $state, $stateParams, YelpFactory, AlertsFactory, FlightFactory) {
 
     // PUBLIC VARIABLES & FUNCTIONS
-    $scope.city = $stateParams.id;
-    $scope.loading = true;
-    $scope.getFlightData = getFlightData;
-    //toggle sidebar
-    $scope.showme = false;
-    
     // Call yelp api on page load
     getCityData();
     getFlightData();
+
+    $scope.city = $stateParams.id;
+    $scope.getFlightData = getFlightData;
+    $scope.loading = true;
+    $scope.loadingFlights = true;
+    //toggle sidebar
+    $scope.showme = false;
+    
 
     // PRIVATE VARIABLES & FUNCTIONS
     function getFlightData() {
       FlightFactory.getCity($scope.city)
       .then(function(res){
+        $scope.loadingFlights = false;
         $scope.flights = res.data;
+        $scope.flights.airObj.price = $scope.flights.airObj.price.replace('USD', '$');
       })
       .catch(function(err){
+        $scope.loadingFlights = false;
         AlertsFactory.add('error', err.data.message);
       })
     }

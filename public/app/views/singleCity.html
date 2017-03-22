@@ -10,12 +10,16 @@
     </div>
     <div class="sidebarGroup" ng-show="showme">
         <div class="sidebar well">
+          <div ng-if="loadingFlights">
+            Loading...
+          </div>
+
           <i class="fa fa-arrow-left fa-2x fa-border back" aria-hidden="true" ng-click='showme = !showme'></i>
-          <h3>flights to {{ city}}</h3>
+          <h3>Flights to {{ city }}</h3>
           <hr>
-          <h4>Price: {{flights.airObj.price}}</h4>
-          <h4>Airline: {{flights.airObj.company}}<h4>
-          <h4>Minutes: {{flights.airObj.data}}</h4>
+          <h4>Price:    {{ flights.airObj.price }}</h4>
+          <h4>Airline:  {{ flights.airObj.company }}<h4>
+          <h4>Minutes:  {{ flights.airObj.data }}</h4>
         </div>
     </div>
   </section>
