@@ -1,10 +1,30 @@
 
-<div ng-if='loading'>
+<div class="loadingDiv" ng-if="loading">
   loading...
 </div>
 
 <div class="container text-center cityContainer" ng-controller="CitiesCtrl">
   <div ng-if='!loading'>
+<!-- PLANES sidebar -->
+  <section>
+    <div class="sidebarButton">
+      <i class="fa fa-plane fa-4x fa-border" aria-hidden="true" ng-click='showme = !showme'></i>
+    </div>
+    <div class="sidebarGroup" ng-show="showme">
+        <div class="sidebar well">
+          <i class="fa fa-arrow-left fa-2x fa-border back" aria-hidden="true" ng-click='showme = !showme'></i>
+          <h3>flights to {{ city}}</h3>
+          <hr>
+          <h4>Price: {{flights.airObj.price}}</h4>
+          <h4>Airline: {{flights.airObj.company}}<h4>
+          <h4>Minutes: {{flights.airObj.data}}</h4>
+        </div>
+    </div>
+  </section>
+
+<!-- Content after API call -->
+<div class="container text-center cityContainer">
+  <div ng-if="!loading">
     
     <div class="row">
       <div class="containerbox flex">
@@ -36,13 +56,13 @@
     <!-- FOOD SECTION -->
     <section>
       <div class="row "> 
-        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='f in topFood track by $index'>
+        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="f in topFood track by $index">
         <div class="row">
             <h3 ng-click="{{f.url}}">{{f.name}}</h3>
         </div>
 
         <div class="row">
-          <div class='imageYelp'>   
+          <div class="imageYelp">   
             <img ng-src="{{f.image_url}}">
           </div>
           <div class="textYelp">
@@ -74,13 +94,13 @@
     
     <!-- COOL LOCATIONS -->
       <div class="row "> 
-        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='l in topFood track by $index'>
+        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="l in topFood track by $index">
         <div class="row">
             <h3>{{l.name}}</h3>
         </div>
 
         <div class="row">
-          <div class='imageYelp'>   
+          <div class="imageYelp">   
             <img ng-src="{{l.image_url}}">
           </div>
           <div class="textYelp">
@@ -113,5 +133,3 @@
 
   </div>
 </div>
-
-

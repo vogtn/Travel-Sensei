@@ -13,10 +13,13 @@ angular
     //PRIVATE VARIABLES & FUNCTIONS
     var user = {
       email: '',
-      password: ''
+      password: '',
+      homeAirport: '',
     }
     function userSignup() {
-      console.log($scope.user)
+      // saves home airport as capital letters
+      $scope.user.homeAirport = $scope.user.homeAirport.toUpperCase();
+
       UserFactory.userSignup($scope.user)
       .then(
         function success(res) {

@@ -33,7 +33,6 @@
     <script type="text/javascript" src="app/controllers/SignupController.js"></script>
     <script type="text/javascript" src="app/controllers/CitiesController.js"></script>
     <script type="text/javascript" src="app/controllers/CityController.js"></script>
-    <script type="text/javascript" src="app/controllers/TokyoController.js"></script>
     <!-- Services -->
     <script type="text/javascript" src="app/services/AlertsFactory.js"></script>
     <script type="text/javascript" src="app/services/AuthFactory.js"></script>
@@ -53,11 +52,11 @@
       <div ng-controller="AlertsCtrl">
         <div ng-repeat='alert in alerts'>
           
-          <div class='alert alert-danger' ng-if="alert.type == 'error'">
+          <div class='alertMessages alert alert-danger' ng-if="alert.type == 'error'">
             {{ alert.message }}
           </div>
 
-          <div class='alert alert-success' ng-if="alert.type == 'success'">
+          <div class='alertMessages alert alert-success' ng-if="alert.type == 'success'">
             {{ alert.message }}
           </div>
 
