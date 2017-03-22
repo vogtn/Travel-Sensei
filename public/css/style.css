@@ -6,12 +6,6 @@
   min-width: 100%;
   position: fixed;
 }
-footer {
-  z-index: 5;
-  display: flex;
-  min-width: 100%;
-  justify-content: space-between;
-}
 .alertMessages {
   margin-top: 50px;
   z-index: 6;
@@ -159,4 +153,30 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+  z-index: 5;
+  display: flex;
+  min-width: 100%;
+  justify-content: space-between;
+}
+
+.sidebarGroup{
+  z-index: 1000;
+  position: fixed;
+  height: 50vh;
+  width: 30vw;
+}
+.sidebarActive{
+  float: left;
+  background-color: white;
+}
+.sidebarButton{
+  z-index: 1000;
+  position: fixed;
+  float: right;
+}
+back{
+  z-index: 2000;
 }

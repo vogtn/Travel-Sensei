@@ -9,6 +9,9 @@ angular
   'FlightFactory',
   function($scope, $state, $stateParams, YelpFactory, AlertsFactory, FlightFactory) {
 
+    //toggle sidebar
+    $scope.showme = false;
+
     FlightFactory.getCity($scope.city)
     .then(function(res){
       $scope.flights = res.data;
