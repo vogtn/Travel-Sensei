@@ -15,7 +15,7 @@ var router = express.Router();
 router.route('/:cityName/data')
   .get(function(req, res) {
     var location = req.params.cityName;
-    
+    console.log(location);
     yelp.search({
       term: 'food',
       location: location,
