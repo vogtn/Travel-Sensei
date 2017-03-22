@@ -12,7 +12,10 @@ var UserSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  homeAirport : String
+  homeAirport : {
+    type: String,
+    required: true
+  }
 });
 
 UserSchema.set('toJSON', {

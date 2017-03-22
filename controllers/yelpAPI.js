@@ -15,7 +15,6 @@ var router = express.Router();
 router.route('/:cityName/data')
   .get(function(req, res) {
     var location = req.params.cityName;
-    console.log(location);
     yelp.search({
       term: 'food',
       location: location,
@@ -31,17 +30,13 @@ router.route('/:cityName/data')
         sort: 2
       }).then(function(localData){
         var yelpLocalArr = localData.businesses;
-        console.log(yelpLocalArr);
         return res.send({yelpFoodArr: yelpFoodArr, yelpLocalArr: yelpLocalArr});
       })
       .catch(function(err){
-        console.log('*********')
-        console.log(err);
         return res.send({message: 'error while searching for businesses' })
       })  
     })
     .catch(function(err) {
-      console.log(err);
       return res.send({message: 'error while searching for food'})
     });
 });

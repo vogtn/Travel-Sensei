@@ -1,11 +1,21 @@
-/*NavBar*/
+/*Nav Stuff*/
 .navbar {
-
+  top: 0;
+  left: 0;
+  z-index: 5;
+  min-width: 100%;
+  position: fixed;
 }
-
+.alertMessages {
+  margin-top: 50px;
+  z-index: 6;
+}
+.spacer-10 {
+  min-height: 10px;
+}
 /* home.html */
 .japanImage {
-	height: 85vh;
+	height: 94vh;
 	width: 100vw;
   color: white;
   background-image: url("http://res.cloudinary.com/dy6bqhnor/image/upload/v1490117119/12-Chureito-pagoda-and-Mount-Fuji-Japan_a4eyav.jpg");
@@ -31,9 +41,9 @@
   border-radius: 25px 0 25px 0;
 }
 .parallax {
-    position: relative;
-    width: 100%;
-    height: 85vh;
+  position: relative;
+  width: 100%;
+  height: 85vh;
 }
 .cityName {
   color: white; 
@@ -62,11 +72,24 @@
   position: absolute;
   text-shadow: 0 0 40px black;
 }
+.cityLink {
+  color: white;
+  opacity: 0.6;
+}
+.cityLink:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.95;
+  cursor: pointer; 
+}
 /* cities html*/
 .searchForm {
-  margin: 2em;
+  margin: 60px 0 0 0;
 }
 /* city html */
+.loadingDiv {
+  height: 94vh;
+}
 .cityContainer{
   width: 100%;
 }
@@ -80,8 +103,6 @@
   height: 230px;
   min-width: 400px;
 }
-
-
 .imageYelp{
   margin-left: 30px;
   float: left
@@ -135,7 +156,9 @@
 }
 
 footer {
+  z-index: 5;
   display: flex;
+  min-width: 100%;
   justify-content: space-between;
 }
 
