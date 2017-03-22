@@ -3,23 +3,42 @@
   loading...
 </div>
 
-<div class="container text-center cityContainer">
+<div class="container text-center cityContainer" ng-controller="CitiesCtrl">
   <div ng-if='!loading'>
     
-    <!-- IMAGE -->
     <div class="row">
-      <div class="containerbox">
+      <div class="containerbox flex">
       <h1 class="cityText">{{ city | uppercase }}</h1>
-        <img src="https://www.fox.nl/images/website2015/branding-productlister/Branding-Japan.jpg" du-parallax y="background">
+        <img class="citiesImage" src="http://wallpaper-gallery.net/images/wallpaper-japan/wallpaper-japan-21.jpg" du-parallax y="background">
       </div>
     </div> 
+    <!-- IMAGE -->
+
+    <!-- IMAGE -->
+    <div class="row">
+      <div class="containerbox flex">
+        <img class="citiesImage" src="http://www.kwm.com/~/media/SjBerwin/Images/Locations/Tokyo-locations.ashx?h=640&w=1800" du-parallax y="background">
+      </div>
+    </div>
+    <!-- TEXT -->
+    <div class="row">
+      <div class="containerbox flex">
+        <h1 class="title">DELICIOUS FOOD</h1>
+      </div>
+    </div>  
+    <!-- IMAGE -->
+    <div class="row">
+      <div class="containerbox flex">
+        <img class="citiesImage" src="http://iamaileen.com/wp-content/uploads/2016/08/teppanyaki-hida-kobe-beef-tokyo-japan-restaurant3.jpg" du-parallax y="background">
+      </div>
+    </div>
 
     <!-- FOOD SECTION -->
     <section>
       <div class="row "> 
         <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='f in topFood track by $index'>
         <div class="row">
-            <h3>{{f.name}}</h3>
+            <h3 ng-click="{{f.url}}">{{f.name}}</h3>
         </div>
 
         <div class="row">
@@ -39,16 +58,21 @@
         </div>
       </div>
     </section>
-
+    <!-- TEXT -->
+    <section>
+    <div class="row">
+      <div class="containerbox flex">
+        <h1 class="title">LOCAL FAVORITES</h1>
+      </div>
+    </div> 
     <!-- IMAGE -->
     <div class="row">
       <div>
-        <img src="http://takanyc.com/wp-content/uploads/2017/02/takanori-miyata-1900-nyc-title.jpg" du-parallax y="background">
+        <img class="citiesImage" src="https://static1.squarespace.com/static/54ce88b3e4b08cdce8e070d8/54efb6d5e4b049918b426ea6/54efd289e4b09bab2ad0147b/1425003145982/lets-travel-to-japan-with-anton-repponen-featured.jpg?format=2500w" du-parallax y="background">
       </div>
     </div>
     
     <!-- COOL LOCATIONS -->
-    <section>
       <div class="row "> 
         <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='l in topFood track by $index'>
         <div class="row">
@@ -73,10 +97,17 @@
       </div>
     </section>
 
+
+    <div class="row">
+      <div class="containerbox flex">
+        <h1 class="titleBig">ENJOY JAPAN</h1>
+      </div>
+    </div> 
+
     <!-- IMAGE -->
     <div class="row">
       <div>
-        <img src="http://cookjpn.com/web/wp-content/uploads/2016/10/cover_004_kaminarimon.jpg" du-parallax y="background">
+        <img class="citiesImage" src="http://kids.nationalgeographic.com/content/dam/kids/photos/Countries/H-P/japan-shibuya-crossing.jpg" du-parallax y="background">
       </div>
     </div>
 
