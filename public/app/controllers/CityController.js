@@ -6,7 +6,16 @@ angular
   '$stateParams',
   'YelpFactory',
   'AlertsFactory',
-  function($scope, $state, $stateParams, YelpFactory, AlertsFactory) {
+  'FlightFactory',
+  function($scope, $state, $stateParams, YelpFactory, AlertsFactory, FlightFactory) {
+
+    FlightFactory.getCity($scope.city)
+    .then(function(res){
+      $scope.flights = res.data;
+    })
+    .catch(function(err){
+      AlertsFactory.add('error', err.data.message);
+    })
     // PUBLIC VARIABLES & FUNCTIONS
     $scope.city = $stateParams.id;
     $scope.loading = true;
