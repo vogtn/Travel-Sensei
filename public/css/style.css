@@ -43,7 +43,7 @@
 .parallax {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 100vh;
 }
 .cityName {
   color: white; 
@@ -101,9 +101,6 @@
   overflow-y: hidden;
   height: 100vh;
   margin-top: 35px;
-}
-.parallaxBox{
-
 }
 .topBox{
   /*border-radius: 30px;*/
