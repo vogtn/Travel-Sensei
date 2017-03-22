@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h1>Nagoya</h1>
 </div>
 <hr>
@@ -8,27 +8,21 @@
 {{f.snippet_text}}
 {{f.phone}}
 {{f.location.address['0']}}
-<!-- {{f.url}}<br> -->
+{{f.url}}<br>
 {{f.rating}}
 {{f.review_count}}
-</div>
-
-
+</div> -->
 
 
 <!-- 
 <hr>
-<div class="well">
-<div class="text-center" ng-repeat='l in topLocal track by $index'>
-<h1>{{l.name}}</h1><br>
-{{l.phone}}<br>
-{{l.location.address['0']}}<br>
+<div class="well col-xs-4" ng-repeat='l in topLocal track by $index'>
+<h3>{{l.name}}</h3>
+<img ng-src="{{l.image_url}}">
+{{l.snippet_text}}
+{{l.phone}}
+{{l.location.address['0']}}
 {{l.url}}<br>
-{{l.rating}}<br>
-{{l.review_count}}<br>
-<img ng-src="{{l.image_url}}"><br>
-{{l.snippet_text}}<br>
-</div>
-</div>
-
- -->
+{{l.rating}}
+{{l.review_count}}
+</div> -->

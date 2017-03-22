@@ -21,7 +21,7 @@ angular
       .then(function(res) {
         $scope.topFood = res.data.yelpFoodArr;
         $scope.topLocal = res.data.yelpLocalArr;
-        console.log($scope.topFood);
+        // console.log($scope.topFood);
         console.log($scope.topLocal);
         $scope.loading = false;
       })
