@@ -6,11 +6,11 @@
 
 <div class="container text-center cityContainer" ng-controller="CitiesCtrl">
 
-  <div ng-if='!loading'>
+  <div ng-if="!loading">
   <!-- PLANES sidebar -->
     <section>
       <div class="sidebarButton">
-        <i class="fa fa-plane fa-4x fa-border" aria-hidden="true" ng-click='showme = !showme'></i>
+        <i id="planeIcon" class="fa fa-plane fa-4x fa-border" aria-hidden="true" ng-click="showme = !showme"></i>
       </div>
       <div class="sidebarGroup" ng-show="showme">
           <div class="sidebar well">
@@ -18,7 +18,7 @@
               Loading...
             </div>
 
-            <i class="fa fa-arrow-left fa-2x fa-border back" aria-hidden="true" ng-click='showme = !showme'></i>
+            <i class="fa fa-arrow-left fa-2x fa-border back" aria-hidden="true" ng-click="showme = !showme"></i>
             <h3>Flights to {{ city }}</h3>
             <hr>
             <h4>Price:    {{ flights.airObj.price }}</h4>
