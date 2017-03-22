@@ -30,6 +30,7 @@ app.use('/users', expressJWT({secret: secret})
   }), require('./controllers/users'));
 // yelp controller
 app.use('/cities', require('./controllers/yelpAPI'));
+app.use('/cities', require('./controllers/flightAPI'));
 
 // this middleware will check if expressJWT did not authorize the user, and return a message
 app.use(function (err, req, res, next) {
