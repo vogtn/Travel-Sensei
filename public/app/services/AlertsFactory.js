@@ -16,6 +16,7 @@ angular
         type: type, 
         message: message
       })
+      setTimeout(clear(), 2000);
     }
     function clear() {
       alerts = [];
