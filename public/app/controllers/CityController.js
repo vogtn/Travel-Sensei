@@ -7,6 +7,15 @@ angular
   'YelpFactory',
   'AlertsFactory',
   function($scope, $state, $stateParams, YelpFactory, AlertsFactory) {
+    YelpFactory.getCity('nagoya')
+    .then(function(res) {
+      $scope.topFood = res.data.yelpFoodArr
+      $scope.topLocal = res.data.yelpLocalArr
+      console.log('success', res);
+    })
+    .catch(function(err) {
+      console.log(err);   
+    })
     // PUBLIC VARIABLES & FUNCTIONS
     $scope.city = $stateParams.id;
     $scope.loading = true;
