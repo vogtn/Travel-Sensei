@@ -5,7 +5,7 @@
 
 /* home.html */
 .japanImage {
-	height: 92vh;
+	height: 85vh;
 	width: 100vw;
   color: white;
   background-image: url("http://res.cloudinary.com/dy6bqhnor/image/upload/v1490117119/12-Chureito-pagoda-and-Mount-Fuji-Japan_a4eyav.jpg");
@@ -22,7 +22,6 @@
   text-shadow: 0 0 15px black;
 }
 .about {
-
   padding: 50px 15px;
   margin: 5% 25% 0 25%;
   border: 17px solid white;  
@@ -34,7 +33,7 @@
 .parallax {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 85vh;
 }
 .cityName {
   color: white; 
@@ -68,7 +67,6 @@
   margin: 2em;
 }
 /* city html */
-<<<<<<< HEAD
 .cityContainer{
   width: 100%;
 }
@@ -134,4 +132,9 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
 }

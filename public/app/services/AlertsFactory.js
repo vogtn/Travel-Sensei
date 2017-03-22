@@ -5,21 +5,21 @@ angular
     var alerts = [];
 
     return {
-      add: add,
       clear: clear,
+      add: add,
       get: get,
       remove: remove
     }
 
+    function clear() {
+      alerts = [];
+    }
     function add(type, message) {
       alerts.push({
         type: type, 
         message: message
       })
-      setTimeout(clear(), 2000);
-    }
-    function clear() {
-      alerts = [];
+      setTimeout(AlertsFactory.clear(), 2000);
     }
     function get() {
       return alerts;
