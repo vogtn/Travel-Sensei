@@ -2,12 +2,11 @@ angular
 .module('TravelSensei')
 .controller('CityCtrl', [
   '$scope',
-  '$state',
   '$stateParams',
   'YelpFactory',
   'AlertsFactory',
   'FlightFactory',
-  function($scope, $state, $stateParams, YelpFactory, AlertsFactory, FlightFactory) {
+  function($scope, $stateParams, YelpFactory, AlertsFactory, FlightFactory) {
 
     // PUBLIC VARIABLES & FUNCTIONS
     // Call yelp api 1second after page load to get $stateParams

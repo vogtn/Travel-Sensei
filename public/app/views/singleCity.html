@@ -30,20 +30,14 @@
 <div class="container text-center cityContainer">
   <div ng-if="!loading">
     
+    <!-- IMAGE -->
     <div class="row">
       <div class="containerbox flex">
       <h1 class="cityText">{{ city | uppercase }}</h1>
-        <img class="citiesImage" src="http://wallpaper-gallery.net/images/wallpaper-japan/wallpaper-japan-21.jpg" du-parallax y="background">
-      </div>
-    </div> 
-    <!-- IMAGE -->
-
-    <!-- IMAGE -->
-    <div class="row">
-      <div class="containerbox flex">
         <img class="citiesImage" src="http://www.kwm.com/~/media/SjBerwin/Images/Locations/Tokyo-locations.ashx?h=640&w=1800" du-parallax y="background">
       </div>
-    </div>
+    </div> 
+
     <!-- TEXT -->
     <div class="row">
       <div class="containerbox flex">
@@ -62,7 +56,7 @@
       <div class="row "> 
         <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="f in topFood track by $index">
         <div class="row">
-            <h3>{{f.name}}</h3>
+            <h3><a href="{{f.url}}">{{ f.name }}</a></h3>
         </div>
 
         <div class="row">
@@ -70,7 +64,7 @@
             <img ng-src="{{f.image_url}}">
           </div>
           <div class="textYelp">
-            {{f.snippet_text}}
+            {{ f.snippet_text }}
           </div>
         </div>
         <div class="row">
@@ -100,7 +94,7 @@
       <div class="row "> 
         <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="l in topFood track by $index">
         <div class="row">
-            <h3>{{l.name}}</h3>
+            <h3>{{ l.name }}</h3>
         </div>
 
         <div class="row">
@@ -108,7 +102,7 @@
             <img ng-src="{{l.image_url}}">
           </div>
           <div class="textYelp">
-            {{l.snippet_text}}
+            {{ l.snippet_text }}
           </div>
         </div>
         <div class="row">
