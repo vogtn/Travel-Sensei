@@ -218,3 +218,12 @@ footer {
 back{
   z-index: 2000;
 }
+.signUpForm{
+  margin-left: 20%;
+  margin-top: 10%;
+  max-width: 50vw;
+  height: 79vh;
+}
+.signupTitle{
+  text-align: center;
+}
