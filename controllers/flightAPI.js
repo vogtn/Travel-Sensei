@@ -3,8 +3,6 @@ var express = require('express');
 var QPXApi = require('qpx-api');
  
 var QPXApiClient = new QPXApi({
-  api_key: 'AIzaSyAGBEF8fCMFWkXfaONM8Z9PRJc_avZZ1W0',
-
   api_key: process.env.TRAVEL_KEY,
   timeout: 9000 // timeout in milleseconds 
 });
