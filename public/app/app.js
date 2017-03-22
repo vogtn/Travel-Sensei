@@ -19,16 +19,11 @@ angular
       templateUrl: 'app/views/cities.html',
       controller: 'CitiesCtrl'
     })
-    .state('city', {
-      url: '/cities/nagoya', /// to be fixed
-      templateUrl: 'app/views/nagoya.html', 
+    .state('test', {
+      url: '/cities/:id', /// to be fixed
+      templateUrl: 'app/views/singleCity.html', 
       controller: 'CityCtrl'
     })
-    // .state('tokyo',{
-    //   url: '/cities/tokyo',
-    //   templateUrl: 'app/views/tokyo.html',
-    //   controller: 'TokyoCtrl'
-    // })
     .state('signup', {
       url: '/signup',
       templateUrl: 'app/views/userSignup.html',
