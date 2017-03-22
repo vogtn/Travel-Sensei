@@ -12,7 +12,6 @@ angular
     .state('home', {
       url: '/',
       templateUrl:'app/views/home.html'
-      // ,controller: 'HomeCtrl'
     })
     .state('cities', {
       url: '/cities',
@@ -20,15 +19,10 @@ angular
       controller: 'CitiesCtrl'
     })
     .state('city', {
-      url: '/cities/nagoya', /// to be fixed
-      templateUrl: 'app/views/nagoya.html', 
+      url: '/cities/:id',
+      templateUrl: 'app/views/singleCity.html', 
       controller: 'CityCtrl'
     })
-    // .state('tokyo',{
-    //   url: '/cities/tokyo',
-    //   templateUrl: 'app/views/tokyo.html',
-    //   controller: 'TokyoCtrl'
-    // })
     .state('signup', {
       url: '/signup',
       templateUrl: 'app/views/userSignup.html',
