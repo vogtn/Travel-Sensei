@@ -12,12 +12,16 @@ footer {
   min-width: 100%;
   justify-content: space-between;
 }
-.alert {
+.alertMessages {
+  margin-top: 50px;
   z-index: 6;
+}
+.spacer-10 {
+  min-height: 10px;
 }
 /* home.html */
 .japanImage {
-	height: 85vh;
+	height: 94vh;
 	width: 100vw;
   color: white;
   background-image: url("http://res.cloudinary.com/dy6bqhnor/image/upload/v1490117119/12-Chureito-pagoda-and-Mount-Fuji-Japan_a4eyav.jpg");
@@ -76,7 +80,7 @@ footer {
 }
 /* cities html*/
 .searchForm {
-  margin: 2em;
+  margin: 60px 0 0 0;
 }
 /* city html */
 .loadingDiv {

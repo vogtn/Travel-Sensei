@@ -52,11 +52,11 @@
       <div ng-controller="AlertsCtrl">
         <div ng-repeat='alert in alerts'>
           
-          <div class='alert alert-danger' ng-if="alert.type == 'error'">
+          <div class='alertMessages alert alert-danger' ng-if="alert.type == 'error'">
             {{ alert.message }}
           </div>
 
-          <div class='alert alert-success' ng-if="alert.type == 'success'">
+          <div class='alertMessages alert alert-success' ng-if="alert.type == 'success'">
             {{ alert.message }}
           </div>
 
