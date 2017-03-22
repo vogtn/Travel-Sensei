@@ -5,21 +5,28 @@ angular
   '$state',
   '$stateParams',
   'YelpFactory',
-  function($scope, $state, $stateParams, YelpFactory) {
-    YelpFactory.getCity('nagoya')
-    .then(function(res) {
-      $scope.topFive = res.data
-      console.log('success', res);
-    })
-    .catch(function(err) {
-      console.log(err);
-    })
-
+  'AlertsFactory',
+  function($scope, $state, $stateParams, YelpFactory, AlertsFactory) {
     // PUBLIC VARIABLES & FUNCTIONS
+    $scope.city = $stateParams.id;
+    $scope.loading = true;
+    
+    // Call yelp api on page load
+    getCityData();
 
 
     // PRIVATE VARIABLES & FUNCTIONS
 
-
+    function getCityData() { 
+      YelpFactory.getCity($scope.city)
+      .then(function(res) {
+        $scope.topFive = res.data;
+        $scope.loading = false;
+      })
+      .catch(function(err) {
+        AlertsFactory.add('error', err.data.message);
+        $scope.loading = false;
+      })
+    }
   }
 ]);
