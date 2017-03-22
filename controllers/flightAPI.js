@@ -10,7 +10,7 @@ var QPXApiClient = new QPXApi({
 var router = express.Router();
 router.route('/:cityName/flightdata')
   .get(function(req, res) {
-    var location = "LAX";
+    var location = req.params.cityName;
     var code;
     if(location == "nagoya"){
         code = "NGO"
