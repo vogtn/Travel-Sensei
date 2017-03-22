@@ -19,7 +19,7 @@ angular
         type: type, 
         message: message
       })
-      setTimeout(AlertsFactory.clear(), 2000);
+      setTimeout(clear(), 2000);
     }
     function get() {
       return alerts;

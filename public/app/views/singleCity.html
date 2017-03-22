@@ -1,10 +1,10 @@
 
-<div ng-if='loading'>
+<div class="loadingDiv" ng-if="loading">
   loading...
 </div>
 
 <div class="container text-center cityContainer">
-  <div ng-if='!loading'>
+  <div ng-if="!loading">
     
     <!-- IMAGE -->
     <div class="row">
@@ -17,13 +17,13 @@
     <!-- FOOD SECTION -->
     <section>
       <div class="row "> 
-        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='f in topFood track by $index'>
+        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="f in topFood track by $index">
         <div class="row">
             <h3>{{f.name}}</h3>
         </div>
 
         <div class="row">
-          <div class='imageYelp'>   
+          <div class="imageYelp">   
             <img ng-src="{{f.image_url}}">
           </div>
           <div class="textYelp">
@@ -50,13 +50,13 @@
     <!-- COOL LOCATIONS -->
     <section>
       <div class="row "> 
-        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='l in topFood track by $index'>
+        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="l in topFood track by $index">
         <div class="row">
             <h3>{{l.name}}</h3>
         </div>
 
         <div class="row">
-          <div class='imageYelp'>   
+          <div class="imageYelp">   
             <img ng-src="{{l.image_url}}">
           </div>
           <div class="textYelp">
