@@ -138,3 +138,22 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+.sidebarGroup{
+  z-index: 1000;
+  position: fixed;
+  height: 50vh;
+  width: 30vw;
+}
+.sidebarActive{
+  float: left;
+  background-color: white;
+}
+.sidebarButton{
+  z-index: 1000;
+  position: fixed;
+  float: right;
+}
+back{
+  z-index: 2000;
+}

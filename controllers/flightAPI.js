@@ -14,6 +14,7 @@ router.route('/:cityName/flightdata')
     var code;
     if(location == "nagoya"){
         code = "NGO"
+        console.log('hello')
     }else{
         code = "NRT"
     }
@@ -22,7 +23,7 @@ router.route('/:cityName/flightdata')
         passengers: { adultCount: 1 },
         slice: [
             {
-            origin: "SFO",
+            origin: "SEA",
             destination: code,
             date: "2017-5-5"
             }

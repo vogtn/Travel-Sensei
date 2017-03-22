@@ -2,6 +2,21 @@
 <div ng-if='loading'>
   loading...
 </div>
+<!-- PLANES sidebar -->
+    <div class="sidebarButton">
+      <i class="fa fa-plane fa-4x fa-border" aria-hidden="true" ng-click='showme = !showme'></i>
+    </div>
+<div class="sidebarGroup" ng-show="showme">
+    <div class="sidebar well">
+      <i class="fa fa-arrow-left fa-2x fa-border back" aria-hidden="true" ng-click='showme = !showme'></i>
+      <h3>flights to {{ city}}</h3>
+      <hr>
+      <h4>Price: {{flights.airObj.price}}</h4>
+      <h4>Airline: {{flights.airObj.company}}<h4>
+      <h4>Minutes: {{flights.airObj.data}}</h4>
+    </div>
+</div>
+
 
 <div class="container text-center cityContainer">
   <div ng-if='!loading'>
@@ -82,5 +97,3 @@
 
   </div>
 </div>
-
-
