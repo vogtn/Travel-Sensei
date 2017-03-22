@@ -11,13 +11,23 @@ angular
     // PUBLIC VARIABLES & FUNCTIONS
     $scope.isLoggedIn = isLoggedIn;
     $scope.logout = logout;  
+    $scope.user = user;
+    $scope.userLogin = userLogin;
 
+  
+    // PRIVATE VARIABLES & FUNCTIONS
+    var user = {
+      email: '',
+      password: ''
+    };
     // Get the modal
     var modal = document.getElementById('myModal');
     // Get the button that opens the modal
     var btnLogin = document.getElementById("login");
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
+    
+    
     // When the user clicks on the button, open the modal 
     btnLogin.onclick = function() {
         modal.style.display = "block";
@@ -32,17 +42,6 @@ angular
             modal.style.display = "none";
         }
     }  
-    
-
-    $scope.user = user;
-    $scope.userLogin = userLogin;
-
-    // PRIVATE VARIABLES & FUNCTIONS
-    var user = {
-      email: '',
-      password: ''
-    };
-
     function userLogin() {
       UserFactory.userLogin($scope.user)
       .then(
@@ -57,8 +56,7 @@ angular
         }
       )
     }
-
-  function userSignup() {
+    function userSignup() {
       console.log($scope.user)
       UserFactory.userSignup($scope.user)
       .then(
@@ -70,9 +68,6 @@ angular
         }
       )
     }
-
-    
-    //PRIVATE FUNCTIONS
     function isLoggedIn() {
       return AuthFactory.isLoggedIn();
     };
