@@ -12,15 +12,14 @@ angular
     .state('home', {
       url: '/',
       templateUrl:'app/views/home.html'
-      // ,controller: 'HomeCtrl'
     })
     .state('cities', {
       url: '/cities',
       templateUrl: 'app/views/cities.html',
       controller: 'CitiesCtrl'
     })
-    .state('test', {
-      url: '/cities/:id', /// to be fixed
+    .state('city', {
+      url: '/cities/:id',
       templateUrl: 'app/views/singleCity.html', 
       controller: 'CityCtrl'
     })
