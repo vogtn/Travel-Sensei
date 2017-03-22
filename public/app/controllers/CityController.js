@@ -6,7 +6,24 @@ angular
   '$stateParams',
   'YelpFactory',
   'AlertsFactory',
-  function($scope, $state, $stateParams, YelpFactory, AlertsFactory) {
+  'FlightFactory',
+  function($scope, $state, $stateParams, YelpFactory, AlertsFactory, FlightFactory) {
+    YelpFactory.getCity('nagoya')
+    .then(function(res) {
+      $scope.topFive = res.data
+      console.log('success', res);
+    })
+    .catch(function(err) {
+      console.log(err);
+    })
+
+    FlightFactory.getCity('nagoya')
+    .then(function(res){
+      $scope.flights = res.data;
+    })
+    .catch(function(err){
+      console.log(err);
+    })
     // PUBLIC VARIABLES & FUNCTIONS
     $scope.city = $stateParams.id;
     $scope.loading = true;
