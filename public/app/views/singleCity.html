@@ -1,21 +1,76 @@
-<div>
-    <h1>{{ city | uppercase }}</h1>
-</div>
 
-<hr>
 <div ng-if='loading'>
   loading...
 </div>
 
-<div ng-if='!loading'>
-  <div class="well col-xs-4" ng-repeat='f in topFood track by $index'>
-    <h3>{{f.name}}</h3>
-    <img ng-src="{{f.image_url}}">
-    {{f.snippet_text}}
-    {{f.phone}}
-    {{f.location.address['0']}}
-    <!-- {{f.url}}<br> -->
-    {{f.rating}}
-    {{f.review_count}}
+<div class="container text-center cityContainer">
+  <div ng-if='!loading'>
+    <div class="row">
+      <div class="containerbox">
+      <h1 class="cityText">{{ city | uppercase }}</h1>
+        <img src="https://www.fox.nl/images/website2015/branding-productlister/Branding-Japan.jpg" du-parallax y="background">
+      </div>
+    </div> 
+    <div class="row "> 
+      <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='f in topFood track by $index'>
+      <div class="row">
+          <h3>{{f.name}}</h3>
+      </div>
+
+      <div class="row">
+        <div class='imageYelp'>   
+          <img ng-src="{{f.image_url}}">
+        </div>
+        <div class="textYelp">
+          {{f.snippet_text}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="lowerYelp">
+          <img src="{{f.rating_img_url_large}}">
+        </div>
+      </div>
+          <!-- {{f.url}}<br> -->
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <img src="http://takanyc.com/wp-content/uploads/2017/02/takanori-miyata-1900-nyc-title.jpg" du-parallax y="background">
+      </div>
+    </div>
+    
+    <div class="row "> 
+      <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat='l in topFood track by $index'>
+      <div class="row">
+          <h3>{{l.name}}</h3>
+      </div>
+
+      <div class="row">
+        <div class='imageYelp'>   
+          <img ng-src="{{l.image_url}}">
+        </div>
+        <div class="textYelp">
+          {{l.snippet_text}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="lowerYelp">
+          <img src="{{l.rating_img_url_large}}">
+        </div>
+      </div>
+          <!-- {{f.url}}<br> -->
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <img src="http://cookjpn.com/web/wp-content/uploads/2016/10/cover_004_kaminarimon.jpg" du-parallax y="background">
+      </div>
+    </div>
   </div>
 </div>
+
+
