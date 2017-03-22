@@ -1,0 +1,21 @@
+<div>
+    <h1>{{ city | uppercase }}</h1>
+</div>
+
+<hr>
+<div ng-if='loading'>
+  loading...
+</div>
+
+<div ng-if='!loading'>
+  <div class="well col-xs-4" ng-repeat='f in topFood track by $index'>
+    <h3>{{f.name}}</h3>
+    <img ng-src="{{f.image_url}}">
+    {{f.snippet_text}}
+    {{f.phone}}
+    {{f.location.address['0']}}
+    <!-- {{f.url}}<br> -->
+    {{f.rating}}
+    {{f.review_count}}
+  </div>
+</div>

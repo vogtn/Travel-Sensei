@@ -3,6 +3,6 @@ angular.module('ParallaxMod', ['duParallax'])
 	'$scope',
 	'parallaxHelper', 
 	function($scope, parallaxHelper){
-    $scope.background = parallaxHelper.createAnimator(-0.4);
+    $scope.background = parallaxHelper.createAnimator(-0.7);
   }
 ]);
