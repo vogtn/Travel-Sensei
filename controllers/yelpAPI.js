@@ -22,15 +22,27 @@ router.route('/:cityName/data')
       limit: 6,           // only 5 results returned
       sort: 2             // 2 = highest rated results
     })
-    .then(function(data) {
-      var yelpBusinessArr = data.businesses;
-
-      console.log(data);    // returns data as object
-      return res.send(yelpBusinessArr);
+    .then(function(foodData) {
+      var yelpFoodArr = foodData.businesses;
+      yelp.search({
+        term: 'local flavor',
+        location: location,
+        limit: 6,
+        sort: 2
+      }).then(function(localData){
+        var yelpLocalArr = localData.businesses;
+        console.log(yelpLocalArr);
+        return res.send({yelpFoodArr: yelpFoodArr, yelpLocalArr: yelpLocalArr});
+      })
+      .catch(function(err){
+        console.log('*********')
+        console.log(err);
+        return res.send({message: 'error while searching for businesses' })
+      })  
     })
     .catch(function(err) {
       console.log(err);
-      return res.send({message: 'error while searching for ', location})
+      return res.send({message: 'error while searching for food'})
     });
 });
 module.exports = router;
