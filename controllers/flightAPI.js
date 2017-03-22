@@ -14,7 +14,6 @@ router.route('/:cityName/flightdata')
     var code;
     if(location == "nagoya"){
         code = "NGO"
-        console.log('hello')
     }else{
         code = "NRT"
     }

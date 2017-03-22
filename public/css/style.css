@@ -165,6 +165,7 @@ footer {
 .sidebarGroup{
   z-index: 1000;
   position: fixed;
+  top: 10%;
   height: 50vh;
   width: 30vw;
 }
@@ -176,6 +177,7 @@ footer {
   z-index: 1000;
   position: fixed;
   float: right;
+  top: 10%;
 }
 back{
   z-index: 2000;
