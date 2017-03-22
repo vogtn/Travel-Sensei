@@ -10,8 +10,8 @@ angular
   function($scope, $state, $stateParams, YelpFactory, AlertsFactory, FlightFactory) {
 
     // PUBLIC VARIABLES & FUNCTIONS
-    // Call yelp api on page load
-    getCityData();
+    // Call yelp api 1second after page load to get $stateParams
+    setTimeout(getCityData, 1000)
     getFlightData();
 
     $scope.city = $stateParams.id;

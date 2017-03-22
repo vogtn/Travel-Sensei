@@ -12,7 +12,7 @@ var router = express.Router();
 
 // /GET, search yelp for destination
 
-router.route('/:cityName/data')
+router.route('/data/:cityName')
   .get(function(req, res) {
     var location = req.params.cityName;
     yelp.search({
