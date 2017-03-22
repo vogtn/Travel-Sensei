@@ -67,7 +67,7 @@
 }
 .cityText {
   color: white;
-  z-index: 2;
+  z-index: 10;
   font-size: 150px;
   position: absolute;
   text-shadow: 0 0 40px black;
@@ -96,12 +96,47 @@
 .cityImage{
   width: 100%;
 }
+.citiesImage{
+  width: 100%;
+  overflow-y: hidden;
+  height: 100vh;
+  margin-top: 35px;
+}
+.parallaxBox{
+
+}
 .topBox{
   /*border-radius: 30px;*/
   padding: 10px;
   margin: 0 auto;
   height: 230px;
   min-width: 400px;
+  border: 0;
+  z-index: 100;
+}
+.titleYelp{
+  margin-bottom: 0;
+  z-index: 100;
+  /*background-image: url('https://www.abercrombiekent.com/assets_global/media/images/brand_marketing/mastheads/lsgj/Asia-Japan-Classic-Japan-(1024x460).jpg');*/
+  /*border: 0;*/
+}
+.title{
+  font-size: 70px;
+  width: 85%;
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 40px black;
+  z-index: 10;
+  margin-top: 830px;
+}
+.titleBig{
+  font-size: 150px;
+  width: 85%;
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 40px black;
+  z-index: 100;
+  margin-top: 500px;
 }
 .imageYelp{
   margin-left: 30px;
@@ -111,6 +146,7 @@
 .textYelp{
   margin: 5px;
   padding-right: 15px;
+  padding-left: 140px;
 }
 
 .lowerYelp{

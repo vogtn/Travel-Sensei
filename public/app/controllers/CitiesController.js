@@ -16,4 +16,4 @@ angular.module('ParallaxMod', ['duParallax'])
       $location.path('/cities/' + $scope.searchTerm);
     }
   }
-]);
+])
