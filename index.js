@@ -13,7 +13,8 @@ var app = express();
 // mongoose models and connection
 var mongoose = require('mongoose');
 var User = require('./models/user');
-mongoose.connect('mongodb://localhost/travelUsers');
+// mongoose.connect('mongodb://localhost/travelUsers');
+mongoose.connect(process.env.MONGOLAB_WHITE_URI || 'mongodb://localhost/travelUsers');
 
 // decode POST data in JSON and URL encoded formats
 app.use(bodyParser.json());
@@ -61,6 +62,7 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-var server = app.listen(process.env.PORT || 3000);
+// var server = app.listen(process.env.PORT || 3000);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mydbname');
 
 module.exports = server;
