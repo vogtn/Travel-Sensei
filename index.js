@@ -25,7 +25,7 @@ app.use(require('morgan')('dev'));
 
 // controllers
 // user auth controller
-app.use('/users', expressJWT({secret: 'secret'})
+app.use('/users', expressJWT({secret: secret})
   .unless({
     path: [{ url: '/users', methods: ['POST'] }]
   }), require('./controllers/users'));
