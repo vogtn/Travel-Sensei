@@ -6,7 +6,7 @@ var path = require('path');
 // JSON web token dependencies, including a secret key to sign the token
 var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
-var secret = process.env.JWT_SECRET;
+var secret = process.env.SECRET;
 
 var app = express();
 
