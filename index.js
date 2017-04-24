@@ -63,6 +63,6 @@ app.get('/*', function(req, res) {
 });
 
 // var server = app.listen(process.env.PORT || 3000);
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mydbname');
+var server = app.listen(process.env.PORT || 3000)
 
 module.exports = server;
